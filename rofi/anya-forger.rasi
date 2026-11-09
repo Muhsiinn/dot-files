@@ -1,0 +1,124 @@
+* {
+    background: #13080d;
+    surface: #26151c;
+    surface-alt: #321b24;
+    foreground: #f2e9ec;
+    muted: #b59ea5;
+    accent: #df7188;
+    accent-deep: #603040;
+    border-color: #70404d;
+    background-color: transparent;
+    normal-background: transparent;
+    normal-foreground: var(foreground);
+    alternate-normal-background: #1c1015;
+    alternate-normal-foreground: var(foreground);
+    selected-normal-background: var(accent-deep);
+    selected-normal-foreground: #fff5f7;
+    active-background: #321b24;
+    active-foreground: var(accent);
+    urgent-background: #6c2637;
+    urgent-foreground: #fff1f3;
+    selected-active-background: #603040;
+    selected-active-foreground: #fff5f7;
+    selected-urgent-background: #a33c53;
+    selected-urgent-foreground: #fff5f7;
+    separatorcolor: var(border-color);
+    spacing: 4px;
+}
+
+window {
+    location: center;
+    anchor: center;
+    width: 38%;
+    padding: 16px;
+    border: 1px;
+    border-radius: 18px;
+    border-color: var(border-color);
+    background-color: rgba(19, 8, 13, 94%);
+}
+
+mainbox {
+    spacing: 11px;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    padding: 8px 11px;
+    border: 1px;
+    border-radius: 10px;
+    border-color: #573441;
+    background-color: var(surface);
+    children: [ prompt, entry ];
+}
+
+prompt {
+    padding: 2px 6px 2px 2px;
+    text-color: var(accent);
+}
+
+entry {
+    placeholder: "Search";
+    placeholder-color: var(muted);
+    text-color: var(foreground);
+}
+
+listview {
+    columns: 1;
+    lines: 8;
+    fixed-height: false;
+    spacing: 3px;
+    background-color: transparent;
+}
+
+element {
+    padding: 6px 8px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+element selected.normal {
+    background-color: var(selected-normal-background);
+    text-color: var(selected-normal-foreground);
+}
+
+element alternate.normal {
+    background-color: var(alternate-normal-background);
+    text-color: var(alternate-normal-foreground);
+}
+
+element normal.active {
+    background-color: var(active-background);
+    text-color: var(active-foreground);
+}
+
+element normal.urgent {
+    background-color: var(urgent-background);
+    text-color: var(urgent-foreground);
+}
+
+element-icon {
+    size: 18px;
+    margin: 0 8px 0 2px;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: var(foreground);
+}
+
+message {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(surface);
+}
+
+textbox {
+    text-color: var(foreground);
+}
+
+scrollbar {
+    handle-width: 4px;
+    border: 0;
+    handle-color: var(accent);
+    background-color: var(surface-alt);
+}

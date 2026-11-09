@@ -1,0 +1,29 @@
+# Drift settings. Drift only reads this file and never rewrites it, so your
+# comments are safe. Restart drift after editing.
+
+[playback]
+volume = 80
+shuffle = false
+repeat = "off"
+autoplay = false
+restore_session = true
+seek_step = 5.0
+volume_step = 5.0
+
+[artist]
+# :artist and ga list the artist's most popular songs first, then more of their songs below
+popular_first = false
+
+[ui]
+# Accent color used throughout the UI.
+# Named colors: black, red, green, yellow, blue, magenta, cyan, gray, dark-gray,
+#               light-red, light-green, light-yellow, light-blue, light-magenta,
+#               light-cyan, white
+# Or use a hex value: "#FF8800"
+accent = "cyan"
+
+[discord]
+# Show the current song in your Discord status. Create an application at
+# https://discord.com/developers/applications (its name is shown after
+# "Listening to") and paste its Application ID here. Empty means off.
+client_id = ""

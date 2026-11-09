@@ -1,0 +1,43 @@
+[mgr]
+cwd = { fg = "#f2e9ec", bold = true }
+hovered = { fg = "#fff4f6", bg = "#47212d", bold = true }
+preview_hovered = { underline = true }
+find_keyword = { fg = "#211116", bg = "#e58a9c", bold = true }
+find_position = { fg = "#f2bcc7", italic = true }
+marker_copied = { fg = "#1b0d11", bg = "#dc7187" }
+marker_cut = { fg = "#fff0f2", bg = "#6f293d" }
+marker_marked = { fg = "#f7dce2", bg = "#582638" }
+marker_selected = { fg = "#fff4f6", bg = "#3d1a25" }
+count_copied = { fg = "#f6dce1", bg = "#713044" }
+count_cut = { fg = "#f6dce1", bg = "#713044" }
+count_selected = { fg = "#f6dce1", bg = "#713044" }
+border_symbol = "│"
+border_style = { fg = "#67434e" }
+
+[status]
+separator_open = ""
+separator_close = ""
+separator_style = { fg = "#3a1b25", bg = "#3a1b25" }
+mode_normal = { fg = "#fff4f6", bg = "#713044", bold = true }
+mode_select = { fg = "#fff4f6", bg = "#8b364c", bold = true }
+mode_un_set = { fg = "#fff4f6", bg = "#3a1b25", bold = true }
+progress_label = { fg = "#f2e9ec", bold = true }
+progress_normal = { fg = "#e58a9c", bg = "#35202a" }
+progress_error = { fg = "#ff9aa9", bg = "#35202a" }
+
+[which]
+cols = 3
+mask = { bg = "#160b10" }
+ cand = { fg = "#ee9aaa", bold = true }
+rest = { fg = "#ae989f" }
+desc = { fg = "#f2e9ec" }
+separator = "  ·  "
+separator_style = { fg = "#815363" }
+
+[filetype]
+rules = [
+  { mime = "image/*", fg = "#e89aaa" },
+  { mime = "{audio,video}/*", fg = "#d5b8dc" },
+  { url = "*/", fg = "#e7a1b0", bold = true },
+  { url = "*", is = "exec", fg = "#d9c8aa" },
+]

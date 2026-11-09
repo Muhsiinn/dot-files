@@ -1,0 +1,184 @@
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: "JetBrains Mono", "Font Awesome 7 Free Solid", sans-serif;
+  font-size: 10px;
+}
+
+window#waybar {
+  background: transparent;
+  color: #f2e9ec;
+}
+
+#workspaces,
+#window,
+#network,
+#custom-network,
+#bluetooth,
+#pulseaudio,
+#battery,
+#clock,
+#cpu,
+#memory,
+#custom-weather,
+#custom-quick-settings,
+#custom-brain,
+#custom-caffeine,
+#custom-display,
+#tray {
+  background: rgba(20, 9, 14, 0.86);
+  border: 1px solid rgba(210, 112, 132, 0.18);
+  border-radius: 11px;
+  padding: 2px 7px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+#workspaces { padding: 0 4px; }
+#workspaces button {
+  color: #b5a2a8;
+  background-color: transparent;
+  min-width: 18px;
+  min-height: 18px;
+  margin: 0 1px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: color 200ms ease, background-color 200ms ease,
+    border-color 200ms ease, box-shadow 200ms ease;
+}
+#workspaces button.empty { color: #7e6a70; }
+#workspaces button.visible { color: #d8c2c8; }
+#workspaces button:hover {
+  color: #fff1f4;
+  background-color: rgba(190, 60, 83, 0.16);
+  border-color: rgba(223, 113, 136, 0.22);
+  box-shadow: none;
+}
+#workspaces button.active {
+  color: #fff5f7;
+  background-color: #7d2d40;
+  border-color: rgba(255, 164, 182, 0.4);
+  box-shadow: 0 0 7px rgba(223, 113, 136, 0.22);
+}
+#workspaces button.active:hover {
+  background-color: #8b3449;
+  border-color: rgba(255, 180, 195, 0.55);
+}
+#workspaces button.urgent { color: #190a0e; background-color: #ff879b; }
+#window {
+    color: #c9b7bd;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+#network { color: #e2c6cd; }
+#custom-network { color: #e2c6cd; }
+#custom-network.disconnected { color: #b5a2a8; }
+#custom-network.ethernet { color: #e2c6cd; }
+#custom-network.wifi { color: #e2c6cd; }
+#bluetooth { color: #d9c6e8; }
+#pulseaudio { color: #e5c4ca; }
+#pulseaudio.muted { color: #9e8c92; }
+#battery { color: #dfc4c8; }
+#battery.warning { color: #f0bd79; }
+#battery.critical { color: #ff8293; }
+#clock { color: #f0c7cf; }
+#custom-weather {
+  color: #e7c8cf;
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", sans-serif;
+  font-size: 11px;
+  padding: 2px 8px;
+}
+#custom-weather.unavailable { color: #9e8c92; }
+#custom-weather.stale { color: #b9a0a7; }
+#custom-quick-settings { color: #ff9cac; font-size: 12px; padding-left: 9px; padding-right: 9px; }
+#tray { padding: 2px 6px; }
+
+#workspaces:hover,
+#clock:hover,
+#battery:hover,
+#pulseaudio:hover,
+#network:hover,
+#custom-network:hover,
+#bluetooth:hover,
+#cpu:hover,
+#memory:hover,
+#custom-weather:hover,
+#custom-quick-settings:hover,
+#custom-brain:hover,
+#custom-caffeine:hover,
+#custom-display:hover,
+#tray:hover {
+  background: rgba(56, 20, 31, 0.94);
+  border-color: rgba(231, 125, 145, 0.36);
+}
+
+tooltip {
+  background: rgba(19, 8, 13, 0.98);
+  border: 1px solid rgba(210, 112, 132, 0.28);
+  border-radius: 9px;
+  color: #f2e9ec;
+}
+#custom-brain {
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", sans-serif;
+  font-size: 15px;
+  padding: 1px 9px;
+  color: #ff9cac;
+}
+
+#custom-brain.level-1 { color: #7d3441; }
+#custom-brain.level-2 { color: #8d3d4c; }
+#custom-brain.level-3 { color: #9e4757; }
+#custom-brain.level-4 { color: #b35364; }
+#custom-brain.level-5 { color: #c95f72; }
+#custom-brain.level-6 { color: #df6c81; }
+#custom-brain.level-7 { color: #f27d93; }
+#custom-brain.level-8 { color: #ff9cac; }
+
+#custom-caffeine {
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", sans-serif;
+  font-size: 13px;
+  padding: 1px 8px;
+}
+
+#custom-display {
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", sans-serif;
+  font-size: 14px;
+  padding: 1px 8px;
+  color: #e7c8cf;
+}
+#custom-display.extend { color: #e7c8cf; }
+#custom-display.mirror { color: #d9c6e8; }
+
+#custom-caffeine { color: #e8a967; }
+#custom-caffeine.level-0 { color: #8d7a80; }
+#custom-caffeine.level-1 { color: #9a7f7e; }
+#custom-caffeine.level-2 { color: #a98579; }
+#custom-caffeine.level-3 { color: #b98d73; }
+#custom-caffeine.level-4 { color: #c9966d; }
+#custom-caffeine.level-5 { color: #d99f69; }
+#custom-caffeine.level-6 { color: #e8a967; }
+#custom-caffeine.level-7 { color: #f2b56f; }
+#custom-caffeine.level-8 { color: #ffc27c; }
+#custom-caffeine.level-9 { color: #ffb48a; }
+#custom-caffeine.level-10 { color: #ffa6a1;}
+
+#custom-anya-uptime {
+    color: #f5a9c8;
+    padding: 0 10px 0 3px;
+    font-weight: bold;
+}
+
+#image.anya {
+    background: transparent;
+    border: none;
+    padding: 0 1px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: -3px;
+}
+

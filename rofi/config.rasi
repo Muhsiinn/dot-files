@@ -1,0 +1,22 @@
+configuration {
+    /* rofi 2.0 renamed "modi" to "modes". Using modes: matters, modi: gets ignored. */
+    modes: "launch:/home/anya/.config/rofi/scripts/launch.py,drun,run,window,web:/home/anya/.config/rofi/scripts/web-search.sh";
+    show-icons: true;
+    matching-negate-char: "!";
+    font: "JetBrains Mono 10";
+    terminal: "wezterm";
+    drun-display-format: "{name}";
+    /* Apps are spawned with a plain g_spawn by rofi, so they stay in rofi's
+     * process group and can be reaped when rofi quits. Detach them into
+     * their own session so every launch (drun/run/accepted commands) survives. */
+    run-command: "bash -c 'exec setsid {cmd}'";
+    run-shell-command: "bash -c 'exec setsid {terminal} -e {cmd}'";
+
+    launch { display-name: "Apps"; }
+    drun   { display-name: "Apps (classic)"; DBusActivatable: false; }
+    run    { display-name: "Run"; }
+    window { display-name: "Windows"; }
+    web    { display-name: "Web"; }
+}
+
+@theme "anya-forger.rasi"

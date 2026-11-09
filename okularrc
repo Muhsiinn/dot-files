@@ -1,0 +1,28 @@
+[Desktop Entry]
+FullScreen=false
+
+[General]
+LockSidebar=true
+ShowSidebar=false
+
+[Recent Files]
+File1[$e]=$HOME/D/Life book /Journal/03.05.2026.md
+File10[$e]=$HOME/D/FH/sm1/intro_to_ai/practialcals/GeneticAlgorithm .py
+File2[$e]=$HOME/D/Life book /Journal/29.04.2026.md
+File3[$e]=$HOME/D/code/MIT/CT/Idea_using_this_concept.md
+File4[$e]=$HOME/D/code/MIT/CT/Notes.md
+File5[$e]=$HOME/D/code/terminal/newsboat/README.md
+File6[$e]=$HOME/brain-dump/2026-11-02.md
+File7[$e]=$HOME/brain-dump/2026-11-01.md
+File8[$e]=$HOME/D/machine learning/mml-book.pdf
+File9[$e]=$HOME/D/books/mans-search-for-meaning.pdf
+Name1[$e]=03.05.2026.md
+Name10[$e]=GeneticAlgorithm .py
+Name2[$e]=29.04.2026.md
+Name3[$e]=Idea_using_this_concept.md
+Name4[$e]=Notes.md
+Name5[$e]=README.md
+Name6[$e]=2026-11-02.md
+Name7[$e]=2026-11-01.md
+Name8[$e]=mml-book.pdf
+Name9[$e]=mans-search-for-meaning.pdf

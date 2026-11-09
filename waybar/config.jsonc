@@ -1,0 +1,130 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 4,
+  "on-sigusr2": "reload",
+  "modules-left": ["ext/workspaces", "hyprland/window","hyprland/submap"],
+  "modules-center": ["image#anya", "custom/anya-uptime","custom/caffeine", "clock", "custom/brain"],
+  "modules-right": ["memory","cpu","custom/weather", "custom/network", "custom/display", "bluetooth", "pulseaudio", "battery", "custom/quick-settings", "tray"],
+
+  "ext/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "sort-by-id": true,
+    "active-only": false,
+    "all-outputs": true,
+    "ignore-hidden": false
+  },
+  "cpu":{
+    "interval":3,
+    "format":" {usage}%"
+  },
+
+"memory": {
+    "interval": 3,
+    "format": " {}%",
+    "tooltip-format": "Used: {used}GB / {total}GB\nAvail: {avail}GB"
+},
+  "hyprland/window": {
+    "format": "{title}",
+    "max-length": 40,
+    "separate-outputs": true
+  },
+  "custom/weather": {
+    "exec": "python3 ~/.config/waybar/scripts/weather.py",
+    "return-type": "json",
+    "format": "{}",
+    "interval": 900,
+    "tooltip": true
+  },
+  "custom/network": {
+    "exec": "python3 ~/.config/waybar/control-center.py waybar-network",
+    "return-type": "json",
+    "format": "{}",
+    "interval": 5,
+    "tooltip": true,
+    "on-click": "~/.config/waybar/quick-settings.sh"
+  },
+  "bluetooth": {
+    "format": "  {status}",
+    "format-disabled": "  Off",
+    "format-off": "  Off",
+    "format-on": "  On",
+    "format-connected": "  {device_alias}",
+    "format-connected-battery": "  {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "Bluetooth status · {controller_alias}: {status}",
+    "interval": 5,
+    "on-click": "~/.config/waybar/quick-settings.sh"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " Muted",
+    "format-icons": { "default": ["", "", ""] },
+    "tooltip-format": "{desc} · {volume}%",
+    "scroll-step": 4,
+    "on-click": "~/.config/waybar/quick-settings.sh"
+  },
+  "battery": {
+    "bat": "BAT0",
+    "adapter": "ACAD",
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
+    "tooltip-format": "{timeTo}\n{capacity}%",
+    "interval": 10
+  },
+  "clock": {
+    "format": "  {:%a %d %b  %H:%M}",
+    "tooltip-format": "{:%A, %B %d, %Y}\nAnya Forger Documentation Zone · click to open",
+    "on-click": "~/.config/waybar/scripts/anya-dashboard.sh"
+  },
+  "custom/quick-settings": {
+    "format": "",
+    "tooltip": "Anya's system control · click to open",
+    "on-click": "~/.config/waybar/quick-settings.sh"
+  },
+  "custom/brain": {
+    "exec": "~/.config/waybar/scripts/brain.sh",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "restart-interval": 2
+  },
+  "custom/caffeine": {
+    "exec": "python3 ~/.config/waybar/scripts/meters.py waybar caffeine",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "interval": 1
+  },
+  "custom/display": {
+    "exec": "python3 ~/.config/waybar/scripts/display.py waybar",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "hide-empty-text": true,
+    "interval": 2,
+    "on-click": "python3 ~/.config/waybar/scripts/display.py menu"
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 7
+  },
+"custom/anya-uptime": {
+    "exec": "~/.config/waybar/scripts/anya-uptime.sh",
+    "return-type": "json",
+    "format": "󰔚 {}",
+    "interval": 60,
+    "tooltip": true
+},
+"image#anya": {
+    "exec": "~/.config/waybar/scripts/anya-uptime.sh image",
+    "size": 24,
+    "interval": 60,
+    "tooltip": true,
+    "on-click": "~/.config/waybar/scripts/anya-dashboard.sh"
+},
+
+}

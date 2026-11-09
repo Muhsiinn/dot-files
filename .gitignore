@@ -1,0 +1,44 @@
+# Browser and application profiles / data
+BraveSoftware/
+browsh/
+chromium/
+Code - OSS/
+discord/
+knime-desktop/
+mozilla/
+Typora/
+vivaldi/
+Zettlr/
+
+# Personal, machine-specific, and runtime state
+cat_installer/
+configstore/
+dconf/
+drift/playlists.json
+gh/
+go/telemetry/
+htop/htop_history
+nextjs-nodejs/
+opencode/service.json
+pulse/
+session/
+spotify/
+todominal/
+uv/
+zoom/
+zoom.conf
+zoomus.conf
+
+# Local backups and old configurations
+crimson-glass-backups/
+nvim.old/
+
+# Generated files, caches, and logs
+**/__pycache__/
+*.py[cod]
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+*:Zone.Identifier
